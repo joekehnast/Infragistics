@@ -2441,6 +2441,14 @@
             <param name="password">The password.</param>
             <param name="domain">The domain.</param>
         </member>
+        <member name="M:Infragistics.Olap.Xmla.XmlaCompression.Decompress(System.Byte[])">
+            <summary>
+            https://msdn.microsoft.com/en-us/library/ee320884(v=sql.105).aspx // protocol layout
+            https://msdn.microsoft.com/en-us/library/ee334172(v=sql.105).aspx // decompresion algorithm
+            </summary>
+            <param name="compressedStream"></param>
+            <returns></returns>
+        </member>
         <member name="T:Infragistics.Olap.Xmla.XmlaPropertiesCollection">
             <summary>
             Collection of <see cref="T:Infragistics.Olap.Xmla.XmlaQueryProperty"/> items.
@@ -9911,7 +9919,7 @@
         <member name="P:Infragistics.Web.Mvc.BaseEditorModel.Value">
             <summary>
             Gets sets value in editor. The effect of setting/getting that option depends on type of editor and on dataMode options.
-            That can be string, number or Date depending on type of editor. If it is used on initialization and the type option is missing, then if 'value' is Number, then 'numeric' editor is created automatically and if 'value' is Date, then the 'date' editor is created.
+            That can be string, number or Date depending on type of editor.
             </summary>
         </member>
         <member name="P:Infragistics.Web.Mvc.BaseEditorModel.TabIndex">
@@ -10921,6 +10929,13 @@
         <member name="M:Infragistics.Web.Mvc.BaseGridFilteringWrapper`2.ColumnSettings(System.Action{Infragistics.Web.Mvc.ColumnFilteringSettingBuilder{Infragistics.Web.Mvc.ColumnFilteringSetting}})">
             <summary>
             <see cref="P:Infragistics.Web.Mvc.GridFiltering.ColumnSettings"/>
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.BaseGridFilteringWrapper`2.Labels(System.Action{Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder{Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels}})">
+            <summary>
+            <see cref="P:Infragistics.Web.Mvc.GridFiltering.Labels"/>
             </summary>
             <param name="builder"></param>
             <returns></returns>
@@ -12577,6 +12592,16 @@
         <member name="P:Infragistics.Web.Mvc.BaseGridSortingWrapper`2.Sorting">
             <summary>
             <see cref="T:Infragistics.Web.Mvc.GridSorting"/>
+            </summary>
+        </member>
+        <member name="T:Infragistics.Web.Mvc.ColumnUpdatingCheckBoxEditorOptionsWrapper">
+            <summary>
+            Checkbox editor options for column updating.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingCheckBoxEditorOptionsWrapper.#ctor(Infragistics.Web.Mvc.CheckBoxEditorModel)">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:Infragistics.Web.Mvc.LinearGaugeClientEvents">
@@ -25122,6 +25147,543 @@
             returns the wrapped ComboInitialSelectedItemsSettings object
             </summary>
         </member>
+        <member name="T:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels">
+            <summary>
+            class that describes filtering labels
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.AdvancedButtonLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.After">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.Before">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.Clear">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.Contains">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.DoesNotContain">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.DoesNotEqual">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.Empty">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.EndsWith">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.Equals">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.False">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FalseLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogAddLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogAllLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogAnyLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogCancelLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogCaptionLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogClearAllLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogConditionLabel1">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogConditionLabel2">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogErrorLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterDialogOkLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.FilterSummaryTitleLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.GreaterThan">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.GreaterThanOrEqualTo">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.LastMonth">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.LastYear">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.LessThan">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.LessThanOrEqualTo">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.NextMonth">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.NextYear">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.NoFilter">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.NotEmpty">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.NotNull">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.NotOn">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.NullLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.On">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.StartsWith">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.ThisMonth">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.ThisYear">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.Today">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.True">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.TrueLabel">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabels.Yesterday">
+            <summary>
+            string representing filtering label
+            </summary>
+        </member>
+        <member name="T:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1">
+            <summary>
+            helper class to allow usage of Lambda expressions in order to build the Labels collection in the MVC View
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.AdvancedButtonLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.advancedButtonLabel
+            </summary>
+            <param name="advancedButtonLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.After(System.String)">
+            <summary>
+            see ColumnFilteringLabels.After
+            </summary>
+            <param name="after"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.Before(System.String)">
+            <summary>
+            see ColumnFilteringLabels.Before
+            </summary>
+            <param name="before"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.Clear(System.String)">
+            <summary>
+            see ColumnFilteringLabels.Clear
+            </summary>
+            <param name="clear"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.Contains(System.String)">
+            <summary>
+            see ColumnFilteringLabels.Contains
+            </summary>
+            <param name="contains"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.DoesNotContain(System.String)">
+            <summary>
+            see ColumnFilteringLabels.DoesNotContain
+            </summary>
+            <param name="doesNotContain"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.DoesNotEqual(System.String)">
+            <summary>
+            see ColumnFilteringLabels.DoesNotEqual
+            </summary>
+            <param name="doesNotEqual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.Empty(System.String)">
+            <summary>
+            see ColumnFilteringLabels.Empty
+            </summary>
+            <param name="empty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.EndsWith(System.String)">
+            <summary>
+            see ColumnFilteringLabels.EndsWith
+            </summary>
+            <param name="endsWith"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.Equals(System.String)">
+            <summary>
+            see ColumnFilteringLabels.Equals
+            </summary>
+            <param name="equals"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.False(System.String)">
+            <summary>
+            see ColumnFilteringLabels.False
+            </summary>
+            <param name="false"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FalseLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FalseLabel
+            </summary>
+            <param name="falseLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogAddLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogAddLabel
+            </summary>
+            <param name="filterDialogAddLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogAllLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogAllLabel
+            </summary>
+            <param name="filterDialogAllLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogAnyLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogAnyLabel
+            </summary>
+            <param name="filterDialogAnyLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogCancelLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogCancelLabel
+            </summary>
+            <param name="filterDialogCancelLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogCaptionLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogCaptionLabel
+            </summary>
+            <param name="filterDialogCaptionLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogClearAllLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogClearAllLabel
+            </summary>
+            <param name="filterDialogClearAllLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogConditionLabel1(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogConditionLabel1 
+            </summary>
+            <param name="filterDialogConditionLabel1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogConditionLabel2(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogConditionLabel2
+            </summary>
+            <param name="filterDialogConditionLabel2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogErrorLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogErrorLabel
+            </summary>
+            <param name="filterDialogErrorLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterDialogOkLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterDialogOkLabel
+            </summary>
+            <param name="filterDialogOkLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.FilterSummaryTitleLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.FilterSummaryTitleLabel
+            </summary>
+            <param name="filterSummaryTitleLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.GreaterThan(System.String)">
+            <summary>
+            see ColumnFilteringLabels.GreaterThan
+            </summary>
+            <param name="greaterThan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.GreaterThanOrEqualTo(System.String)">
+            <summary>
+            see ColumnFilteringLabels.GreaterThanOrEqualTo
+            </summary>
+            <param name="greaterThanOrEqualTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.LastMonth(System.String)">
+            <summary>
+            see ColumnFilteringLabels.LastMonth
+            </summary>
+            <param name="lastMonth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.LastYear(System.String)">
+            <summary>
+            see ColumnFilteringLabels.LastYear
+            </summary>
+            <param name="lastYear"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.LessThan(System.String)">
+            <summary>
+            see ColumnFilteringLabels.LessThan
+            </summary>
+            <param name="lessThan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.LessThanOrEqualTo(System.String)">
+            <summary>
+            see ColumnFilteringLabels.LessThanOrEqualTo
+            </summary>
+            <param name="lessThanOrEqualTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.NextMonth(System.String)">
+            <summary>
+            see ColumnFilteringLabels.NextMonth
+            </summary>
+            <param name="nextMonth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.NextYear(System.String)">
+            <summary>
+            see ColumnFilteringLabels.nextYear
+            </summary>
+            <param name="nextYear"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.NoFilter(System.String)">
+            <summary>
+            see ColumnFilteringLabels.NoFilter
+            </summary>
+            <param name="noFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.NotEmpty(System.String)">
+            <summary>
+            see ColumnFilteringLabels.NotEmpty
+            </summary>
+            <param name="notEmpty"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.NotNull(System.String)">
+            <summary>
+            see ColumnFilteringLabels.NotNull
+            </summary>
+            <param name="notNull"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.NotOn(System.String)">
+            <summary>
+            see ColumnFilteringLabels.NotOn
+            </summary>
+            <param name="notOn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.NullLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.NullLabel
+            </summary>
+            <param name="nullLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.On(System.String)">
+            <summary>
+            see ColumnFilteringLabels.On
+            </summary>
+            <param name="on"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.ThisMonth(System.String)">
+            <summary>
+            see ColumnFilteringLabels.ThisMonth
+            </summary>
+            <param name="thisMonth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.ThisYear(System.String)">
+            <summary>
+            see ColumnFilteringLabels.ThisYear
+            </summary>
+            <param name="thisYear"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.Today(System.String)">
+            <summary>
+            see ColumnFilteringLabels.today
+            </summary>
+            <param name="today"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.True(System.String)">
+            <summary>
+            see ColumnFilteringLabels.True
+            </summary>
+            <param name="true"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.TrueLabel(System.String)">
+            <summary>
+            see ColumnFilteringLabels.TrueLabel
+            </summary>
+            <param name="trueLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.Yesterday(System.String)">
+            <summary>
+            see ColumnFilteringLabels.Yesterday
+            </summary>
+            <param name="yesterday"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.Grid.Filtering.ColumnFilteringLabelsBuilder`1.Labels">
+            <summary>
+            list of ColumnFilterSetting objects 
+            </summary>
+        </member>
         <member name="T:Infragistics.Web.Mvc.DialogClientEvents">
             <summary>
             Names of client events exposed by Dialog (igDialog widget)
@@ -26159,6 +26721,16 @@
             Sets whether the leader lines are visible.
             </summary>
         </member>
+        <member name="M:Infragistics.Web.Mvc.RingSeriesBase`3.LeaderLineType(Infragistics.Web.Mvc.LeaderLineType)">
+            <summary>
+            Sets what type of leader lines will be used for the outside end labels.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.RingSeriesBase`3.LeaderLineMargin(System.Double)">
+            <summary>
+            Sets the margin between a label and its leader line. The default is 6 pixels.
+            </summary>
+        </member>
         <member name="M:Infragistics.Web.Mvc.RingSeriesBase`3.OthersCategoryThreshold(System.Double)">
             <summary>
             Sets the threshold value that determines if slices are grouped into the Others slice.
@@ -26187,9 +26759,9 @@
             The default zero value is equivalent to 3 o'clock.
             </remarks>
         </member>
-        <member name="M:Infragistics.Web.Mvc.RingSeriesBase`3.IsSurfaceInteractionDisabled(System.Boolean)">
+        <member name="M:Infragistics.Web.Mvc.RingSeriesBase`3.RadiusFactor(System.Double)">
             <summary>
-            Sets whether all surface interactions with the plot area should be disabled.
+            Sets the scaling factor of the chart's radius. Value between 0 and 1.
             </summary>
         </member>
         <member name="M:Infragistics.Web.Mvc.RingSeriesBase`3.DataBind">
@@ -26356,6 +26928,16 @@
             Gets or sets whether the leader lines are visible.
             </summary>
         </member>
+        <member name="P:Infragistics.Web.Mvc.RingSeriesBaseModel.LeaderLineType">
+            <summary>
+            Gets or sets what type of leader lines will be used for the outside end labels.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.RingSeriesBaseModel.LeaderLineMargin">
+            <summary>
+            Gets or sets the margin between a label and its leader line. The default is 6 pixels.
+            </summary>
+        </member>
         <member name="P:Infragistics.Web.Mvc.RingSeriesBaseModel.OthersCategoryThreshold">
             <summary>
             Gets or sets the threshold value that determines if slices are grouped into the Others slice.
@@ -26384,9 +26966,9 @@
             The default zero value is equivalent to 3 o'clock.
             </remarks>
         </member>
-        <member name="P:Infragistics.Web.Mvc.RingSeriesBaseModel.IsSurfaceInteractionDisabled">
+        <member name="P:Infragistics.Web.Mvc.RingSeriesBaseModel.RadiusFactor">
             <summary>
-            Gets or sets whether all surface interactions with the plot area should be disabled.
+            Gets or sets the scaling factor of the chart's radius. Value between 0 and 1.
             </summary>
         </member>
         <member name="P:Infragistics.Web.Mvc.RingSeriesBaseModel.Name">
@@ -26467,6 +27049,11 @@
         <member name="P:Infragistics.Web.Mvc.RingSeriesBaseModel.Legend">
             <summary>
             The series legend
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.RingSeriesBaseModel.IsSurfaceInteractionDisabled">
+            <summary>
+            Gets or sets whether all surface interactions with the plot area should be disabled.
             </summary>
         </member>
         <member name="P:Infragistics.Web.Mvc.HierarchicalRingSeriesModel.ChildrenMemberPath">
@@ -26895,6 +27482,11 @@
             Note: In case there are no list items - the editor will reamin readonly
             </summary>
         </member>
+        <member name="P:Infragistics.Web.Mvc.TextEditorModel.SuppressNotifications">
+            <summary>
+            Disables default notifications for basic validation scenarios built in the editors such as required list selection, value wrapping around or spin limits.
+            </summary>
+        </member>
         <member name="P:Infragistics.Web.Mvc.TextEditorModel.WidgetName">
             <summary>
             The name of the widget this model will instantiate.
@@ -27233,6 +27825,13 @@
             <param name="selectFromListOnly"></param>
             <returns></returns>
         </member>
+        <member name="M:Infragistics.Web.Mvc.TextEditorWrapperBase`2.SuppressNotifications(System.Boolean)">
+            <summary>
+            <see cref="P:Infragistics.Web.Mvc.TextEditorModel.SuppressNotifications"/>
+            </summary>
+            <param name="suppressNotifications"></param>
+            <returns></returns>
+        </member>
         <member name="M:Infragistics.Web.Mvc.NumericEditorWrapperBase`2.Regional(System.Object)">
             <summary>
             <see cref="P:Infragistics.Web.Mvc.NumericEditorModel.Regional"/>
@@ -27509,6 +28108,12 @@
             Sets difference between year in Gregorian calendar and displayed year.
             </summary>
         </member>
+        <member name="P:Infragistics.Web.Mvc.DateEditorModel.SpinDelta">
+            <summary>
+            Sets delta-value which is used to increment or decrement value in editor on spin events. If value is set to negative value an exception is thrown. 
+            Non integer value is supported only for dataMode double and float.
+            </summary>
+        </member>
         <member name="P:Infragistics.Web.Mvc.DateEditorModel.LimitSpinToCurrentField">
             <summary>
             Sets ability to modify only 1 date field on spin events.
@@ -27671,6 +28276,13 @@
             <see cref="P:Infragistics.Web.Mvc.DateEditorModel.UseLastGoodDate"/>
             </summary>
             <param name="enable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.DateEditorWrapperBase`2.SpinDelta(System.Double)">
+            <summary>
+            <see cref="P:Infragistics.Web.Mvc.DateEditorModel.SpinDelta"/>
+            </summary>
+            <param name="spinDelta"></param>
             <returns></returns>
         </member>
         <member name="M:Infragistics.Web.Mvc.DateEditorWrapperBase`2.LimitSpinToCurrentField(System.Nullable{System.Boolean})">
@@ -31858,6 +32470,14 @@
             filtering extensions
             </summary>
         </member>
+        <member name="M:Infragistics.Web.Mvc.FilteringExtensions.BuildPredicate(System.Collections.Generic.List{Infragistics.Web.Mvc.FilterExpression},System.Nullable{System.Boolean})">
+            <summary>
+            converts a list of filtering expressions into a LINQ predicate 
+            </summary>
+            <param name="expressions"></param>
+            <param name="isCaseSensitive"></param>
+            <returns></returns>
+        </member>
         <member name="M:Infragistics.Web.Mvc.FilteringExtensions.Where``1(System.Linq.IQueryable{``0},System.String,System.Object[])">
             <summary>
             where clause
@@ -31933,16 +32553,14 @@
             <param name="expressions"></param>
             <param name="grid"></param>
         </member>
-        <member name="M:Infragistics.Web.Mvc.GridFiltering.BuildPredicate(System.Collections.Generic.List{Infragistics.Web.Mvc.FilterExpression})">
-            <summary>
-            converts a list of filtering expressions into a LINQ predicate 
-            </summary>
-            <param name="expressions"></param>
-            <returns></returns>
-        </member>
         <member name="P:Infragistics.Web.Mvc.GridFiltering.ColumnSettings">
             <summary>
             a list of column settings that define custom filtering options per column 
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.GridFiltering.Labels">
+            <summary>
+            A list of configurable and localized labels that are used for the predefined filtering conditions in the filter dropdowns.
             </summary>
         </member>
         <member name="P:Infragistics.Web.Mvc.GridFiltering.FilterExprUrlKey">
@@ -33727,37 +34345,42 @@
         </member>
         <member name="F:Infragistics.Web.Mvc.ColumnEditorType.Text">
             <summary>
-            The igEditor with type text is used
+            An igTextEditor is used
             </summary>
         </member>
         <member name="F:Infragistics.Web.Mvc.ColumnEditorType.Mask">
             <summary>
-            The igEditor with type mask is used
+            An igMaskEditor is used
             </summary>
         </member>
         <member name="F:Infragistics.Web.Mvc.ColumnEditorType.Date">
             <summary>
-            The igEditor with type date is used
+            An igDateEditor is used
             </summary>
         </member>
         <member name="F:Infragistics.Web.Mvc.ColumnEditorType.DatePicker">
             <summary>
-            The igEditor with type datepicker is used
+            An igDatePicker is used
             </summary>
         </member>
         <member name="F:Infragistics.Web.Mvc.ColumnEditorType.Numeric">
             <summary>
-            The igEditor with type numeric is used
+            An igNumericEditor is used
             </summary>
         </member>
         <member name="F:Infragistics.Web.Mvc.ColumnEditorType.Currency">
             <summary>
-            The igEditor with type currency is used
+            An igCurrencyEditor is used
             </summary>
         </member>
         <member name="F:Infragistics.Web.Mvc.ColumnEditorType.Percent">
             <summary>
-            The igEditor with type percent is used
+            An igPercentEditor is used
+            </summary>
+        </member>
+        <member name="F:Infragistics.Web.Mvc.ColumnEditorType.Checkbox">
+            <summary>
+            An igCheckboxEditor is used 
             </summary>
         </member>
         <member name="F:Infragistics.Web.Mvc.ColumnEditorType.Combo">
@@ -35418,12 +36041,12 @@
         </member>
         <member name="P:Infragistics.Web.Mvc.GridHiding.ColumnChooserWidth">
             <summary>
-            The default column chooser width in pixels.
+            The default column chooser width.
             </summary>
         </member>
         <member name="P:Infragistics.Web.Mvc.GridHiding.ColumnChooserHeight">
             <summary>
-            The default column chooser height in pixels.
+            The default column chooser height.
             </summary>
         </member>
         <member name="P:Infragistics.Web.Mvc.GridHiding.DropDownAnimationDuration">
@@ -35510,14 +36133,14 @@
             <param name="width"></param>
             <returns></returns>
         </member>
-        <member name="M:Infragistics.Web.Mvc.GridHidingWrapper.ColumnChooserWidth(System.Nullable{System.Int32})">
+        <member name="M:Infragistics.Web.Mvc.GridHidingWrapper.ColumnChooserWidth(System.String)">
             <summary>
             <see cref="P:Infragistics.Web.Mvc.GridHiding.ColumnChooserWidth"/>
             </summary>
             <param name="width"></param>
             <returns></returns>
         </member>
-        <member name="M:Infragistics.Web.Mvc.GridHidingWrapper.ColumnChooserHeight(System.Nullable{System.Int32})">
+        <member name="M:Infragistics.Web.Mvc.GridHidingWrapper.ColumnChooserHeight(System.String)">
             <summary>
             <see cref="P:Infragistics.Web.Mvc.GridHiding.ColumnChooserHeight"/>
             </summary>
@@ -39241,791 +39864,16 @@
             Returns reference to the grid unbound column
             </summary>
         </member>
-        <member name="T:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions">
-            <summary>
-            Combo editor options for column updating.
-            </summary>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.JsonFromModelStore(System.Collections.Generic.IDictionary{System.String,System.Object})">
-            <summary>
-            <see cref="M:Infragistics.Web.Mvc.ModelBase.JsonFromModelStore(System.Collections.Generic.IDictionary{System.String,System.Object})"/>
-            </summary>
-            <param name="store"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DropDownAttachedToBody">
-            <summary>
-            Gets sets ability to append container of drop-down list to the body or to the parent of combo.
-            </summary>
-            <remarks>
-            <p class="body">Default value is 'true'</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.Virtualization">
-            <summary>
-            Gets sets ability to use virtual rendering for drop-down list.
-            If that option is enabled, then only visible items are created and top edge of first visible item in list is aligned to the top edge of list.
-            </summary>
-            <remarks>
-            <p class="body">Default value is 'false'</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.CaseSensitive">
-            <summary>
-            Set ability to use case sensitive or ignore case searching for matches defined by RenderMatchItems and FilteringCondition.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.AutoSelectFirstMatch">
-            <summary>
-            Gets sets whether the first matching item should be auto selected when typing in input.
-            </summary>
-            <remarks>
-            <p class="body">Default value is 'true'</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.CloseDropDownOnBlur">
-            <summary>
-            Gets sets ability to close drop-down list when control loses focus.
-            </summary>
-            <remarks>
-            <p class="body">Default value is 'true'</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DropDownOnFocus">
-            <summary>
-            Set ability to show drop-down list when Combo gets focus.
-            </summary>
-            <remarks>
-            <p class="body">Note: that property is not related to FilteringType and FilteringCondition.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.CloseDropDownOnSelect">
-            <summary>
-            Gets sets ability to close drop down list when single item in the list is selected with mouse click or enter press. 
-            The default value when multi selection is enabled will be false. 
-            This option will not close the drop down when multiple selection is enabled and selection with ctrl or shift is performed.
-            </summary>
-            <remarks>
-            <p class="body">Default value is 'true'</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.SelectItemBySpaceKey">
-            <summary>
-            Set ability to select active item in list by Space key.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.CompactData">
-            <summary>
-            Sets ability to send to client all data or only required data (TextKey and ValueKey).
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.PreventSubmitOnEnter">
-            <summary>
-            Gets sets ability to prevent form submitting on enter key press
-            </summary>
-            <remarks>
-            <p class="body">Default value is 'true'</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.EnableClearButton">
-            <summary>
-            Set ability to show a button which allows to clear field.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.AutoComplete">
-            <summary>
-            Gets sets ability to autocomplete field from first matching item in list
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DataSource">
-            <summary>
-            Set data source for data displayed in list.
-            </summary>
-            <remarks>
-            <p class="body">The expected value is instance of IQueryable.<br></br>
-            It also can be array of objects, which represent rows in list.<br></br>
-            If value is string value, then it is assumed to be an url address which points to source of data.<br></br>
-            Example: "http ://odata.netflix.com/Catalog/Titles?$format=json&amp;$callback=?"
-            </p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ValidatorOptions">
-            <summary>
-            Sets validation options.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.LoadOnDemandSettings">
-            <summary>
-            Sets load on demand settings.
-            If CascadingSettings.ParentComboKey is set, then LoadOnDemand is not supported.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.MultiSelectionSettings">
-            <summary>
-            Gets sets object specifying multi selection feature options. 
-            The object has following properties enabled, addWithKeyModifier, showCheckboxes and itemSeparator. 
-            Set enabled to true to turn multi selection on. 
-            Set addWithKeyModifier to true to disable the additive selection, then additive selection can be done by ctrl + mouse click / enter.
-            Set showCheckboxes to true to render check boxes in front of each drop down item. 
-            Use itemSeparator to set what string to be rendered between items in field. 
-            Note showCheckboxes and itemSeparator has effect only if multi selection is enabled.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.InitialSelectedItemsSettings">
-            <summary>
-            a list of initial selected items
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.Grouping">
-            <summary>
-            Gets sets object specifying grouping feature options. The option has key and dir properties
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.Width">
-            <summary>
-            Gets sets width of combo. 
-            </summary>
-            <remarks>
-            <p class="body">The numeric and string values (valid html units for size) are supported. It includes %, px, em and other units.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.Height">
-            <summary>
-            Gets sets height of combo.
-            </summary>
-            <remarks>
-            <p class="body">The numeric and string values (valid html units for size) are supported. It includes %, px, em and other units.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DataSourceType">
-            <summary>
-            Gets sets data source type (such as "json", "xml", etc). Please refer to the documentation of $.ig.DataSource and its type property.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DataSourceUrl">
-            <summary>
-            Gets sets url which is used for sending JSON on request for remote filtering (MVC for example). That option is required when load on demand is enabled and its type is remote.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ResponseTotalRecCountKey">
-            <summary>
-            Sets property in the response specifying the total number of records on the server.
-            </summary>
-            <remarks>
-            <p class="body">see $.ig.DataSource. property in the response specifying the total number of records on the server.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ResponseDataKey">
-            <summary>
-            Sets the name of record which holds the list of data rows in response-JSON object and when CompactData is disabled.
-            </summary>
-            <remarks>
-            <p class="body">Default value is set to "Records". It means that rows of items should belong to the Records object.</p>
-            <p class="body">For more information, consult documentation for javascript of $.ig.DataSource.</p>
-            <p class="body">This is basically the property in the responses where data records are held, if the response is wrapped.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ResponseContentType">
-            <summary>
-            Content type of the response.
-            </summary>
-            <remarks>
-            <p class="body">See http://api.jquery.com/jQuery.ajax/ => contentType.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.RequestType">
-            <summary>
-            Specifies the HTTP verb to be used to issue the request
-            </summary>
-            <remarks>
-            <p class="body">Default value is set to 'GET'</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ValueKey">
-            <summary>
-            Sets name of column which contains the "value".
-            </summary>
-            <remarks>
-            <p class="body">If it is missing, then name of first column will be used.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.TextKey">
-            <summary>
-            Sets name of column which contains the displayed text.
-            </summary>
-            <remarks>
-            <p class="body">If it is missing, then ValueKey will be used.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ItemTemplate">
-            <summary>
-            Gets sets template used to render an item in list.
-            </summary>
-            <remarks>
-            <p class="body">
-            Notes:<br></br>
-            1. The jquery.tmpl.js of Microsoft is used and application should provide supported syntax for content.
-            2. Template is rendered inside of LI html element.
-            So, application should consider restriction for layout: do not use "block" html elements and in case of absolutely positioned elements,
-            they should not overlap with checkbox icons.
-            </p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.InputName">
-            <summary>
-            Gets sets name of the hidden INPUT element, which is used when submiting data. 
-            Its value will be set to values of selected items valueKeys separated by "," character on any change in igCombo.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.NoMatchFoundText">
-            <summary>
-            Gets sets text of list item for condition when "filteringType" option is enabled and no match was found. That is an override for the $.ig.Combo.locale.noMatchFoundText.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.PlaceHolder">
-            <summary>
-            Gets sets value that is displayed when input field is empty.
-            Default value is 'select...'.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ID">
-            <summary>
-            Sets id of the combo
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.UseExistingElement">
-            <summary>
-            Sets the ID of the Combo.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.Format">
-            <summary>
-            Gets or sets the format string that is used to format the text display values in the combo. 
-            Valid options are:
-            "auto" (default) - uses automatic formatting for Date and number objects.
-            "none", "", or null - will disable formatting
-            Custom values can be something like "currency", "percent", "dateLong", "time", "MMM-dd-yyyy H:mm tt", etc.
-            Custom format strings should match the data type in "textKey" column.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.FilterExprUrlKey">
-            <summary>
-            Gets sets url key name that specifies how the remote filtering expressions will be encoded for remote requests, e.g. '&amp;amp;filter('col') = startsWith.' 
-            Default is OData
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DropDownButtonTitle">
-            <summary>
-            Gets sets title for html element which represend drop-down button. 
-            That is an override for the $.ig.Combo.locale.dropDownButtonTitle.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ClearButtonTitle">
-            <summary>
-            Gets sets title for html element which represend clear button. 
-            That is an override for the $.ig.Combo.locale.clearButtonTitle.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.HeaderTemplate">
-            <summary>
-            Gets sets template used to render header in drop-down list.
-            </summary>
-            <remarks>
-            <p class="body">The template is rendered inside of DIV html element.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.FooterTemplate">
-            <summary>
-            Gets sets template used to render footer in drop-down list.
-            </summary>
-            <remarks>
-            <p class="body">The template is rendered inside of DIV html element.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DropDownWidth">
-            <summary>
-            Sets width of drop-down list in pixels.
-            </summary>
-            <remarks>
-            <p class="body">Default value is 0 and width of combo is used.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.AnimationShowDuration">
-            <summary>
-            Sets duration of show drop-down list animation in milliseconds.
-            </summary>
-            <remarks>
-            <p class="body">Default value is 400.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.AnimationHideDuration">
-            <summary>
-            Sets duration of hide drop-down list animation in milliseconds.
-            </summary>
-            <remarks>
-            <p class="body">Default value is 400.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.VisibleItemsCount">
-            <summary>
-            Gets sets how many items should be shown at once. 
-            </summary>
-            <remarks>
-            <p class="body">Notes:<br />
-            That options is used for virtualization in order to render initial list items.</p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DelayFilteringOnKeyUp">
-            <summary>
-            Specifies the delay duration before triggering next filtering operation. 
-            Useful to boost performance by lowering the filtering operations count.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.TabIndex">
-            <summary>
-            Gets sets tabIndex for field of combo.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ResponseDataType">
-            <summary>
-            Response type when a URL is set as the data source.
-            </summary>
-             <remarks>
-             <p class="body">
-             Notes:<br></br>
-             json type="string"
-             xml type="string"
-             html type="string"
-             script type="string"
-             jsonp type="string"
-             text type="string"
-             </p>
-             </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.FilteringType">
-            <summary>
-             Gets sets type of filtering.
-            </summary>
-            <remarks>
-            <p class="body">
-            Notes:<br></br>
-            If this option is set to "remote", then the "css.waitFiltering" is applied to combo and its drop-down list.
-            remote type="string" filtering is performed by server.
-            local type="string" filtering is performed by $.ig.DataSource.
-            none type="string" filtering is disabled.
-            </p>
-            </remarks>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.FilteringCondition">
-            <summary>
-            Gets sets condition used for filtering.
-            type="contains|doesNotContain|startsWith|endsWith|greaterThan|lessThan|greaterThanOrEqualTo|lessThanOrEqualTo|equals|doesNotEqual
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.FilteringLogic">
-            <summary>
-            Gets sets filtering logic.
-            type="OR|AND"
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.Mode">
-            <summary>
-            Sets gets functionality mode.
-            editable type="string" Allows to modify value by edit field and drop-down list.
-            dropdown type="string" Allows to modify value by drop-down list only.
-            readonlylist type="string" Allows to open list, but does not allow any changes in field or selection in drop-down list. If selection is not set, then first item in dataSource is automatically selected.
-            readonly type="string" Does not allow to open list or change value in field. If selection is not set, then first item in dataSource is automatically selected.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.HighlightMatchesMode">
-            <summary>
-            Gets sets condition used for highlighting of matching parts in items of drop-down list.
-            multi type="string" multiple matches in a single item are rendered.
-            contains type="string" match at any position in item is rendered.
-            startsWith type="string" only match which starts from the beginning of text is rendered.
-            full type="string" only fully matched items are rendered.
-            null type="object" matches are not rendered.
-            </summary>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DropDownOrientation">
-            <summary>
-            Gets sets drop down opening orientation for the dorp down list when open button is clicked
-            'auto' type="string" Calculate orientation depending on combo position
-            'top' type="string" Top orientation
-            'bottom' type="string" Bottom orientation
-            </summary>
-        </member>
         <member name="T:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper">
             <summary>
             Combo editor options for column updating.
             </summary>
         </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.#ctor(Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions)">
+        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.#ctor(Infragistics.Web.Mvc.ComboModel)">
             <summary>
             
             </summary>
             <param name="model"></param>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.DataSource(System.Object)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DataSource"/>
-            </summary>
-            <param name="dataSource"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ValidatorOptions(System.Action{Infragistics.Web.Mvc.EditorValidatorOptionsWrapper})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ValidatorOptions"/>
-            </summary>
-            <param name="wrapperAction"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.LoadOnDemandSettings(System.Action{Infragistics.Web.Mvc.ComboLoadOnDemandSettingsWrapper})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.LoadOnDemandSettings"/>
-            </summary>
-            <param name="wrapperAction"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.MultiSelectionSettings(System.Action{Infragistics.Web.Mvc.ComboMultiSelectionSettingsWrapper})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.MultiSelectionSettings"/>
-            </summary>
-            <param name="wrapperAction"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ComboInitialSelectedItems(System.Action{Infragistics.Web.Mvc.ComboInitialSelectedItemsSettingsBuilder{Infragistics.Web.Mvc.ComboInitialSelectedItemsSettings}})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.InitialSelectedItemsSettings"/>
-            </summary>
-            <param name="list"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.Grouping(System.Action{Infragistics.Web.Mvc.ComboGroupingWrapper})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.Grouping"/>
-            </summary>
-            <param name="wrapperAction"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.DropDownWidth(System.Nullable{System.Int32})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DropDownWidth"/>
-            </summary>
-            <param name="value"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.AnimationShowDuration(System.Nullable{System.Int32})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.AnimationShowDuration"/>
-            </summary>
-            <param name="value"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.AnimationHideDuration(System.Nullable{System.Int32})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.AnimationHideDuration"/>
-            </summary>
-            <param name="value"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.VisibleItemsCount(System.Nullable{System.Int32})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.VisibleItemsCount"/>
-            </summary>
-            <param name="count"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.DelayFilteringOnKeyUp(System.Nullable{System.Int32})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.DelayFilteringOnKeyUp"/>
-            </summary>
-            <param name="delay"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.TabIndex(System.Nullable{System.Int32})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.TabIndex"/>
-            </summary>
-            <param name="index"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.DropDownAttachedToBody(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.DropDownAttachedToBody"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.Virtualization(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.Virtualization"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.CaseSensitive(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.CaseSensitive"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.AutoSelectFirstMatch(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.AutoSelectFirstMatch"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.CloseDropDownOnBlur(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.CloseDropDownOnBlur"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.DropDownOnFocus(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.DropDownOnFocus"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.CloseDropDownOnSelect(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.CloseDropDownOnSelect"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.SelectItemBySpaceKey(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.SelectItemBySpaceKey"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.CompactData(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.CompactData"/>
-            </summary>
-            <param name="enable"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.PreventSubmitOnEnter(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.PreventSubmitOnEnter"/>
-            </summary>
-            <param name="prevent"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.EnableClearButton(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.EnableClearButton"/>
-            </summary>
-            <param name="enableClearButton"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.AutoComplete(System.Nullable{System.Boolean})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.AutoComplete"/>
-            </summary>
-            <param name="autoComplete"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ResponseDataType(System.Nullable{Infragistics.Web.Mvc.ComboResponseDataType})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.ResponseDataType"/>
-            </summary>
-            <param name="type"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.FilteringType(System.Nullable{Infragistics.Web.Mvc.ComboFilteringType})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.FilteringType"/>
-            </summary>
-            <param name="type"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.FilteringCondition(System.Nullable{Infragistics.Web.Mvc.ComboFilteringCondition})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.FilteringCondition"/>
-            </summary>
-            <param name="condition"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.FilteringLogic(System.Nullable{Infragistics.Web.Mvc.ComboFilteringLogic})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.FilteringLogic"/>
-            </summary>
-            <param name="logic"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.Mode(System.Nullable{Infragistics.Web.Mvc.ComboMode})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.Mode"/>
-            </summary>
-            <param name="mode"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.HighlightMatchesMode(System.Nullable{Infragistics.Web.Mvc.ComboHighlightMatchesMode})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.HighlightMatchesMode"/>
-            </summary>
-            <param name="mode"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.DropDownOrientation(System.Nullable{Infragistics.Web.Mvc.ComboDropDownOrientation})">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.DropDownOrientation"/>
-            </summary>
-            <param name="orientation"></param>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ID(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ID"/>
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.Width(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.Width"/>
-            </summary>
-            <param name="width"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.Height(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.Height"/>
-            </summary>
-            <param name="height"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.DataSourceType(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.DataSourceType"/>
-            </summary>
-            <param name="type"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ResponseTotalRecCountKey(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.ResponseTotalRecCountKey"/>
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ResponseDataKey(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.ResponseDataKey"/>
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ResponseContentType(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.ResponseContentType"/>
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.RequestType(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.RequestType"/>
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ValueKey(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.ValueKey"/>
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.TextKey(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptions.TextKey"/>
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ItemTemplate(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.ItemTemplate"/>
-            </summary>
-            <param name="template"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.InputName(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.InputName"/>
-            </summary>
-            <param name="name"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.NoMatchFoundText(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.NoMatchFoundText"/>
-            </summary>
-            <param name="text"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.PlaceHolder(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.PlaceHolder"/>
-            </summary>
-            <param name="name"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.Format(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.Format"/>
-            </summary>
-            <param name="format"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.FilterExprUrlKey(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.FilterExprUrlKey"/>
-            </summary>
-            <param name="key"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.DropDownButtonTitle(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.DropDownButtonTitle"/>
-            </summary>
-            <param name="dropDownButtonTitle"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.ClearButtonTitle(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.ClearButtonTitle"/>
-            </summary>
-            <param name="clearButtonTitle"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.HeaderTemplate(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.HeaderTemplate"/>
-            </summary>
-            <param name="template"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.FooterTemplate(System.String)">
-            <summary>
-            <see cref="P:Infragistics.Web.Mvc.ComboModel.FooterTemplate"/>
-            </summary>
-            <param name="template"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingComboEditorOptionsWrapper.Model">
-            <summary>
-            A reference to the model for this wrapper.
-            </summary>
         </member>
         <member name="T:Infragistics.Web.Mvc.ColumnUpdatingDateEditorOptionsWrapper">
             <summary>
@@ -40175,6 +40023,12 @@
             <summary>
             The options for numeric editor.<br></br>
             That property should be used when EditorType is Numeric, or Currency, or Percent, or when actual/dynamic type of editor for grid-column is numeric-editor.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Web.Mvc.ColumnUpdatingSetting.CheckBoxEditorOptions">
+            <summary>
+            The options for checkbox editor.<br></br>
+            This property should be used when EditorType is Checkbox.
             </summary>
         </member>
         <member name="P:Infragistics.Web.Mvc.ColumnUpdatingSetting.RatingEditorOptions">
@@ -40373,6 +40227,13 @@
         <member name="M:Infragistics.Web.Mvc.ColumnUpdatingSettingWrapper.NumericEditorOptions(System.Action{Infragistics.Web.Mvc.ColumnUpdatingNumericEditorOptionsWrapper})">
             <summary>
             <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingSetting.NumericEditorOptions"/>
+            </summary>
+            <param name="wrapperAction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Infragistics.Web.Mvc.ColumnUpdatingSettingWrapper.CheckBoxEditorOptions(System.Action{Infragistics.Web.Mvc.ColumnUpdatingCheckBoxEditorOptionsWrapper})">
+            <summary>
+            <see cref="P:Infragistics.Web.Mvc.ColumnUpdatingSetting.CheckBoxEditorOptions"/>
             </summary>
             <param name="wrapperAction"></param>
             <returns></returns>
@@ -51837,7 +51698,7 @@
             Event fired after the widget has built and attach all the DOM it is rendering.
             </summary>
         </member>
-        <member name="F:Infragistics.Web.Mvc.TileManagerClientEvents.TileFocising">
+        <member name="F:Infragistics.Web.Mvc.TileManagerClientEvents.TileFocusing">
             <summary>
             Event fired prior to a tile move from normal to focused state.
             </summary>
